@@ -10,10 +10,10 @@ The "service counter" , "controller counter", and "other counter" each increment
 
 **Setup**
 
-1. ```npm i```  
+1. Install packages: ```npm i```  
 
-2. ```gulp```
+2. Build using gulp: ```gulp```
 
-3. ```node server```
+3. Start the server: ```node server```
 
 4. Navigate to `localhost:5000` in your browser.
