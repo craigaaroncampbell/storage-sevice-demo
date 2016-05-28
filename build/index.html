@@ -12,12 +12,12 @@
   <section data-ng-controller="OtherController as other">
     <h1>other controller counter: {{other.count}}</h1>
     <button data-ng-click="other.addCount()">change other controller count</button>
-    <div data-ng-if="other.count < 2 || other.count > 2" data-ng-controller="CraigController as craig2">
-      <h1>service counter: {{craig2.counter.count}}</h1>
-      <h1>this controller counter: {{craig2.count}}  (this controller will stop being rendered when other counter is exactly 2)</h1>
+    <div data-ng-if="other.count < 2 || other.count > 2" data-ng-controller="CraigController as craig">
+      <h1>service counter: {{craig.service.count}}</h1>
+      <h1>this controller counter: {{craig.count}}  (this controller will stop being rendered when other counter is exactly 2)</h1>
       <h1>other controller counter: {{other.count}}  (other controller stays in the view)</h1>
-      <button data-ng-click="craig2.add()">change service count</button>
-      <button data-ng-click="craig2.addCount()">change controller count</button>
+      <button data-ng-click="craig.serviceAddCount()">change service count</button>
+      <button data-ng-click="craig.addCount()">change controller count</button>
       <button data-ng-click="other.addCount()">change other controller count</button>
     </div>
   </section>

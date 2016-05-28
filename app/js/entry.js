@@ -11,8 +11,8 @@ serviceTestApp.factory('storageService', [ function() {
 }]);
 
 serviceTestApp.controller('CraigController', ['storageService', function(storageService) {
-  this.counter = storageService;
-  this.add = storageService.addCount.bind(storageService);
+  this.service = storageService;
+  this.serviceAddCount = storageService.addCount.bind(storageService);
   this.count = 0;
   this.addCount = function(){
     this.count++;
