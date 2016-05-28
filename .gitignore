@@ -1,3 +1,4 @@
 **/*node_modules
 build
-**/*test_bundle
+test/unit/test_bundle.js
+test/unit/test_bundle.js.map
