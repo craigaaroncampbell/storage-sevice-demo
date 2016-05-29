@@ -14,14 +14,14 @@ serviceTestApp.controller('CraigController', ['storageService', function(storage
   this.service = storageService;
   this.serviceAddCount = storageService.addCount.bind(storageService);
   this.count = 0;
-  this.addCount = function(){
+  this.addCount = function() {
     this.count++;
   };
 }]);
 
 serviceTestApp.controller('OtherController', [ function() {
   this.count = 0;
-  this.addCount = function(){
+  this.addCount = function() {
     this.count++;
   };
 }]);

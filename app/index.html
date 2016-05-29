@@ -10,15 +10,13 @@
     <p>The controller's counter gets reset to 0 when then controller leaves the Dom but later is re-instantiated.</p>
   </header>
   <section data-ng-controller="OtherController as other">
-    <h1>other controller counter: {{other.count}}</h1>
+    <h1 id="otherCount">other controller counter: {{other.count}}</h1>
     <button data-ng-click="other.addCount()">change other controller count</button>
     <div data-ng-if="other.count < 2 || other.count > 2" data-ng-controller="CraigController as craig">
-      <h1>service counter: {{craig.service.count}}</h1>
-      <h1>this controller counter: {{craig.count}}  (this controller will stop being rendered when other counter is exactly 2)</h1>
-      <h1>other controller counter: {{other.count}}  (other controller stays in the view)</h1>
+      <h1 id="serviceCount">service counter: {{craig.service.count}}</h1>
+      <h1 id="controllerCount">this controller counter: {{craig.count}} (this controller will stop being rendered when other counter is exactly 2)</h1>
       <button data-ng-click="craig.serviceAddCount()">change service count</button>
       <button data-ng-click="craig.addCount()">change controller count</button>
-      <button data-ng-click="other.addCount()">change other controller count</button>
     </div>
   </section>
   <script src="bundle.js"></script>
